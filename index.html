@@ -136,7 +136,7 @@
     .contactRow .btn{background:white;color:var(--green);border-color:white}
     footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted);font-size:.82rem}
     .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.legal{max-width:780px}
-    @media(max-width:900px){
+    @media(max-width:900px){.processGrid{grid-template-columns:1fr}.processSteps{grid-template-columns:1fr}
       .navlinks a:not(.btn){display:none}
       .heroGrid,.problemGrid,.solutionGrid,.traceGrid,.statusGrid{grid-template-columns:1fr}
       .hero{padding-top:54px}.float{left:10px}
@@ -155,6 +155,17 @@
     .heroCard img{aspect-ratio:10/7;object-fit:cover;object-position:center}
     .evidenceCard img{aspect-ratio:16/9;object-fit:contain;background:#fff}
     .diagram img{aspect-ratio:1/1;object-fit:contain;background:#fff}
+
+  
+    .process{background:#f7fbf9}
+    .processGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:center}
+    .processVisual{background:white;border:1px solid var(--line);border-radius:24px;padding:12px;box-shadow:var(--shadow)}
+    .processVisual img{width:100%;display:block;border-radius:16px;aspect-ratio:16/7;object-fit:cover}
+    .processSteps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+    .processStep{background:white;border:1px solid var(--line);border-radius:16px;padding:18px}
+    .processStep strong{display:block;color:var(--green);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+    .processStep span{color:var(--muted);font-size:.88rem}
+    .processNote{margin-top:14px;color:#71807c;font-size:.78rem}
 
   </style>
 </head>
@@ -228,6 +239,36 @@
           <div class="flowCard"><div class="flowNum">02</div><h3>Conservar</h3><p>El sistema termoeléctrico busca regular activamente la temperatura del compartimiento durante el traslado.</p></div>
           <div class="flowCard"><div class="flowNum">03</div><h3>Monitorizar</h3><p>El sensado local registra temperatura y estado del sistema para detectar desviaciones y eventos relevantes.</p></div>
           <div class="flowCard"><div class="flowNum">04</div><h3>Trazar</h3><p>La hoja de ruta contempla registro digital, batería, ubicación y alertas para documentar el trayecto.</p></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="process" id="proceso">
+      <div class="wrap">
+        <div class="processGrid">
+          <div>
+            <span class="kicker">Contexto clínico y logístico</span>
+            <h2 class="sectionTitle">El órgano pasa por una cadena crítica antes de llegar al receptor.</h2>
+            <p class="sectionLead">
+              LifeVault surge de observar el proceso real de procuración, acondicionamiento y traslado.
+              Cada transición —desde quirófano hasta transporte— exige coordinación, control térmico,
+              identificación y continuidad operativa.
+            </p>
+            <div class="processSteps">
+              <div class="processStep"><strong>01 · Procuración</strong><span>Obtención y preparación del órgano bajo protocolos clínicos.</span></div>
+              <div class="processStep"><strong>02 · Acondicionamiento</strong><span>Empaque, identificación y preparación para conservación y traslado.</span></div>
+              <div class="processStep"><strong>03 · Transporte</strong><span>Movilización entre instituciones bajo restricciones de tiempo y temperatura.</span></div>
+            </div>
+            <p class="processNote">
+              Imágenes de contexto del proceso hospitalario utilizadas para comprender el flujo logístico.
+              No representan validación clínica de LifeVault.
+            </p>
+          </div>
+          <div class="processVisual">
+            <img src="assets/lifevault-proceso-clinico.jpg"
+                 alt="Secuencia de procuración, acondicionamiento y traslado de órganos en entorno hospitalario">
+          </div>
         </div>
       </div>
     </section>
@@ -351,7 +392,7 @@
         <div class="teamGrid">
           <article class="person"><div class="avatar">AT</div><h3>Ing. Alejandra Trelles</h3><div class="role">Co-Founder · Product & Engineering</div><p>Desarrollo principal del producto, integración técnica y origen de la idea.</p></article>
           <article class="person"><div class="avatar">HV</div><h3>Mtro. Hugo G. Venegas</h3><div class="role">Co-Founder · Strategy & Partnerships</div><p>Desarrollo, estrategia, relaciones institucionales y procuración de fondos.</p></article>
-          <article class="person"><div class="avatar">HB</div><h3>Dr. Hélix Barajas</h3><div class="role">Co-Founder · Clinical Advisor</div><p>Perspectiva médica especializada, acceso al entorno clínico y orientación para validación.</p></article>
+          <article class="person"><div class="avatar">HB</div><h3>Dr. Hélix Barajas</h3><div class="role">Clinical Advisor</div><p>Perspectiva médica especializada, acceso al entorno clínico y orientación para validación.</p></article>
         </div>
       </div>
     </section>
