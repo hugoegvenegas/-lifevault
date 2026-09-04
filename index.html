@@ -3,54 +3,378 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="LifeVault: startup MedTech en desarrollo para conservación, monitoreo y transporte trazable de órganos destinados a trasplante." />
+  <meta name="description" content="LifeVault es una startup MedTech en desarrollo para conservación activa, monitoreo y transporte trazable de órganos destinados a trasplante." />
   <meta name="theme-color" content="#0b3b35" />
+  <meta property="og:title" content="LifeVault — Preservar cada órgano. Proteger cada oportunidad." />
+  <meta property="og:description" content="Plataforma portátil de conservación activa, monitoreo y trazabilidad para transporte de órganos. Startup MedTech en desarrollo, TRL 2–3." />
+  <meta property="og:type" content="website" />
   <title>LifeVault — Preservar cada oportunidad</title>
   <style>
-    :root{--ink:#10211e;--muted:#5f6f6b;--green:#0f6b59;--green2:#159a7d;--mint:#eaf7f2;--line:#dce9e4;--paper:#fbfdfc;--white:#fff;--gold:#c7943d;--shadow:0 24px 60px rgba(15,70,60,.11)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-    a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:10;background:rgba(251,253,252,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(220,233,228,.8)}
-    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.03em;font-size:1.25rem;text-decoration:none}.mark{width:31px;height:31px;border:2px solid var(--green);border-radius:10px;display:grid;place-items:center;color:var(--green);font-size:.9rem}.navlinks{display:flex;gap:26px;align-items:center;font-size:.92rem}.navlinks a{text-decoration:none;color:#42534f}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;border:1px solid var(--green);transition:.2s}.btn.primary{background:var(--green);color:white}.btn.ghost{background:white;color:var(--green)}.btn:hover{transform:translateY(-1px)}
-    .hero{padding:84px 0 56px;overflow:hidden}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:var(--mint);color:var(--green);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}.dot{width:8px;height:8px;border-radius:999px;background:var(--gold)}
-    h1{font-size:clamp(3rem,6vw,5.8rem);line-height:.96;letter-spacing:-.065em;margin:22px 0 22px;max-width:750px}.lead{font-size:1.18rem;color:#4e625d;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.micro{margin-top:22px;color:#73827e;font-size:.82rem}.heroCard{position:relative;background:white;border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:var(--shadow)}.heroCard img{width:100%;display:block;border-radius:18px}.float{position:absolute;left:-26px;bottom:28px;background:white;border:1px solid var(--line);box-shadow:0 15px 35px rgba(22,70,60,.13);padding:14px 16px;border-radius:14px}.float b{display:block;color:var(--green);font-size:1.15rem}.float span{font-size:.76rem;color:var(--muted)}
-    .metrics{padding:20px 0 72px}.metricGrid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:white;border-radius:20px;overflow:hidden}.metric{padding:26px;border-right:1px solid var(--line)}.metric:last-child{border-right:0}.metric strong{font-size:1.55rem;display:block;color:var(--green);letter-spacing:-.03em}.metric span{font-size:.84rem;color:var(--muted)}
-    section{padding:88px 0}.kicker{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem}.sectionTitle{font-size:clamp(2.2rem,4vw,3.8rem);line-height:1.03;letter-spacing:-.05em;margin:12px 0 18px;max-width:780px}.sectionLead{color:var(--muted);font-size:1.05rem;max-width:760px}.problem{background:#0d2f2a;color:white}.problem .kicker{color:#79d6bc}.problem .sectionLead{color:#bdd2cc}.problemGrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}.darkCard{padding:22px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.05);border-radius:18px}.darkCard b{display:block;margin-bottom:7px}.darkCard p{margin:0;color:#bed0cb;font-size:.9rem}
-    .solutionGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:center}.diagram{background:white;border:1px solid var(--line);border-radius:24px;padding:16px;box-shadow:var(--shadow)}.diagram img{width:100%;border-radius:14px;display:block}.features{display:grid;gap:12px;margin-top:28px}.feature{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;padding:15px 0;border-bottom:1px solid var(--line)}.feature:last-child{border-bottom:0}.ico{width:42px;height:42px;border-radius:12px;background:var(--mint);display:grid;place-items:center;color:var(--green);font-weight:900}.feature b{display:block}.feature span{color:var(--muted);font-size:.9rem}
-    .platform{background:#f0f7f4}.productGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}.product{background:white;border:1px solid var(--line);border-radius:20px;padding:25px}.product.active{border:2px solid var(--green);position:relative}.tag{font-size:.7rem;font-weight:800;background:var(--green);color:white;border-radius:999px;padding:5px 9px;position:absolute;right:18px;top:18px}.product h3{font-size:1.4rem;margin:4px 0 8px}.product p{color:var(--muted);font-size:.9rem}.product .status{font-size:.75rem;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.07em}
-    .statusGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px}.roadmap{position:relative;margin-top:25px}.step{display:grid;grid-template-columns:32px 1fr;gap:16px;padding:0 0 24px}.stepNum{width:32px;height:32px;border-radius:999px;background:var(--green);color:white;display:grid;place-items:center;font-size:.75rem;font-weight:800}.step b{display:block}.step small{color:var(--muted)}.stageCard{background:#0d2f2a;color:white;border-radius:24px;padding:30px}.stageCard .big{font-size:4rem;letter-spacing:-.07em;line-height:1;font-weight:850}.stageCard p{color:#c3d4cf}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chip{padding:7px 10px;border:1px solid rgba(255,255,255,.16);border-radius:999px;font-size:.76rem;color:#d7e6e2}
-    .ecosystemGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}.ecoCard{display:block;text-decoration:none;border:1px solid var(--line);background:white;border-radius:20px;padding:24px;transition:.2s}.ecoCard:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.ecoCard .ecoLabel{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--green)}.ecoCard h3{margin:7px 0 8px;font-size:1.3rem}.ecoCard p{margin:0;color:var(--muted);font-size:.9rem}.participation{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap}.participation a{padding:10px 14px;background:var(--mint);border:1px solid var(--line);border-radius:999px;text-decoration:none;font-weight:800;color:var(--green);font-size:.84rem}.teamGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}.person{border:1px solid var(--line);background:white;border-radius:20px;padding:24px}.avatar{width:48px;height:48px;border-radius:14px;background:var(--mint);display:grid;place-items:center;color:var(--green);font-weight:900;margin-bottom:18px}.person h3{margin:0 0 2px}.role{color:var(--green);font-size:.82rem;font-weight:800}.person p{color:var(--muted);font-size:.9rem;margin-bottom:0}
-    .cta{padding:40px 0 96px}.ctaBox{background:linear-gradient(135deg,#0d3a32,#0f6b59);color:white;border-radius:30px;padding:50px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.ctaBox h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1;letter-spacing:-.05em;margin:0 0 12px}.ctaBox p{color:#d0e4de;margin:0;max-width:690px}.ctaBox .btn{background:white;color:var(--green);border-color:white}
-    footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted);font-size:.82rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.legal{max-width:760px}
-    @media(max-width:900px){.navlinks a:not(.btn){display:none}.heroGrid,.problemGrid,.solutionGrid,.statusGrid,.ctaBox{grid-template-columns:1fr}.hero{padding-top:54px}.float{left:10px}.metricGrid{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.productGrid,.teamGrid,.ecosystemGrid{grid-template-columns:1fr}.ctaBox{padding:34px}.cards{grid-template-columns:1fr}}
-    @media(max-width:560px){.wrap{width:min(100% - 26px,1160px)}h1{font-size:3.15rem}.metricGrid{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)!important}.metric:last-child{border-bottom:0!important}.actions .btn{width:100%}.heroCard{padding:10px;border-radius:20px}.float{position:static;margin-top:10px}.ctaBox{border-radius:22px}}
+    :root{
+      --ink:#10211e;--muted:#5e706b;--green:#0f6b59;--green2:#159a7d;
+      --deep:#0b302a;--mint:#eaf7f2;--mint2:#f3faf7;--line:#dce9e4;
+      --paper:#fbfdfc;--white:#fff;--gold:#c7943d;--shadow:0 24px 60px rgba(15,70,60,.11);
+      --softshadow:0 12px 34px rgba(15,70,60,.08)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+    a{color:inherit}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(251,253,252,.91);backdrop-filter:blur(14px);border-bottom:1px solid rgba(220,233,228,.86)}
+    .navin{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.03em;font-size:1.25rem;text-decoration:none}
+    .mark{width:32px;height:32px;border:2px solid var(--green);border-radius:10px;display:grid;place-items:center;color:var(--green);font-size:.86rem}
+    .navlinks{display:flex;gap:24px;align-items:center;font-size:.9rem}
+    .navlinks a{text-decoration:none;color:#42534f}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:750;border:1px solid var(--green);transition:.2s ease}
+    .btn.primary{background:var(--green);color:white}
+    .btn.ghost{background:white;color:var(--green)}
+    .btn.soft{background:var(--mint);border-color:var(--line);color:var(--green)}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(15,70,60,.12)}
+    .hero{padding:82px 0 54px;overflow:hidden}
+    .heroGrid{display:grid;grid-template-columns:1.03fr .97fr;gap:58px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:var(--mint);color:var(--green);font-weight:850;font-size:.76rem;text-transform:uppercase;letter-spacing:.08em}
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--gold)}
+    h1{font-size:clamp(3rem,6vw,5.65rem);line-height:.96;letter-spacing:-.065em;margin:22px 0 22px;max-width:760px}
+    .lead{font-size:1.18rem;color:#4e625d;max-width:680px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .micro{margin-top:22px;color:#73827e;font-size:.82rem}
+    .heroCard{position:relative;background:white;border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:var(--shadow);overflow:visible}
+    .heroCard img{width:100%;display:block;border-radius:18px}
+    .float{position:absolute;left:-26px;bottom:28px;background:white;border:1px solid var(--line);box-shadow:0 15px 35px rgba(22,70,60,.13);padding:14px 16px;border-radius:14px}
+    .float b{display:block;color:var(--green);font-size:1.15rem}
+    .float span{font-size:.76rem;color:var(--muted)}
+    .statusBadge{position:absolute;right:30px;top:30px;background:rgba(11,48,42,.92);color:white;padding:8px 11px;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.05em}
+    .metrics{padding:20px 0 72px}
+    .metricGrid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:white;border-radius:20px;overflow:hidden}
+    .metric{padding:26px;border-right:1px solid var(--line)}
+    .metric:last-child{border-right:0}
+    .metric strong{font-size:1.55rem;display:block;color:var(--green);letter-spacing:-.03em}
+    .metric span{font-size:.84rem;color:var(--muted)}
+    .metric a{color:var(--green);text-underline-offset:2px}
+    section{padding:88px 0}
+    .kicker{color:var(--green);font-weight:850;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem}
+    .sectionTitle{font-size:clamp(2.2rem,4vw,3.75rem);line-height:1.03;letter-spacing:-.05em;margin:12px 0 18px;max-width:820px}
+    .sectionLead{color:var(--muted);font-size:1.05rem;max-width:780px}
+    .problem{background:var(--deep);color:white}
+    .problem .kicker{color:#79d6bc}.problem .sectionLead{color:#bdd2cc}
+    .problemGrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .darkCard{padding:22px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.05);border-radius:18px}
+    .darkCard b{display:block;margin-bottom:7px}.darkCard p{margin:0;color:#bed0cb;font-size:.9rem}
+    .how{background:var(--mint2)}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px;position:relative}
+    .flowCard{background:white;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--softshadow);position:relative}
+    .flowNum{width:34px;height:34px;border-radius:10px;background:var(--green);color:white;display:grid;place-items:center;font-weight:850;font-size:.78rem;margin-bottom:18px}
+    .flowCard h3{margin:0 0 8px;font-size:1.12rem}.flowCard p{margin:0;color:var(--muted);font-size:.9rem}
+    .solutionGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:center}
+    .diagram{background:white;border:1px solid var(--line);border-radius:24px;padding:16px;box-shadow:var(--shadow)}
+    .diagram img{width:100%;border-radius:14px;display:block}
+    .features{display:grid;gap:12px;margin-top:28px}
+    .feature{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;padding:15px 0;border-bottom:1px solid var(--line)}
+    .feature:last-child{border-bottom:0}
+    .ico{width:42px;height:42px;border-radius:12px;background:var(--mint);display:grid;place-items:center;color:var(--green);font-weight:900}
+    .feature b{display:block}.feature span{color:var(--muted);font-size:.9rem}
+    .trace{background:linear-gradient(180deg,#f7fbf9,#eef7f3)}
+    .traceGrid{display:grid;grid-template-columns:1fr .85fr;gap:54px;align-items:center}
+    .traceMock{background:#0f2723;border-radius:28px;padding:22px;color:white;box-shadow:var(--shadow)}
+    .traceTop{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:4px 4px 18px}
+    .traceTop strong{font-size:1.05rem}.roadtag{font-size:.7rem;color:#87d7c2;border:1px solid rgba(135,215,194,.35);padding:5px 8px;border-radius:999px}
+    .traceScreen{background:#f7fbf9;color:var(--ink);border-radius:20px;padding:18px}
+    .tempLine{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:16px}
+    .temp{font-size:2.6rem;font-weight:850;letter-spacing:-.06em;color:var(--green)}
+    .good{font-size:.75rem;font-weight:800;color:var(--green);background:var(--mint);padding:6px 8px;border-radius:999px}
+    .traceRows{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .traceMini{padding:12px;border:1px solid var(--line);border-radius:14px;background:white}
+    .traceMini b{display:block;font-size:.82rem}.traceMini span{color:var(--muted);font-size:.76rem}
+    .platform{background:#f0f7f4}
+    .productGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+    .product{background:white;border:1px solid var(--line);border-radius:20px;padding:25px}
+    .product.active{border:2px solid var(--green);position:relative}
+    .tag{font-size:.7rem;font-weight:850;background:var(--green);color:white;border-radius:999px;padding:5px 9px;position:absolute;right:18px;top:18px}
+    .product h3{font-size:1.4rem;margin:4px 0 8px}.product p{color:var(--muted);font-size:.9rem}
+    .product .status{font-size:.72rem;font-weight:850;color:var(--green);text-transform:uppercase;letter-spacing:.07em}
+    .statusGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px}
+    .roadmap{position:relative;margin-top:25px}
+    .step{display:grid;grid-template-columns:32px 1fr;gap:16px;padding:0 0 24px}
+    .stepNum{width:32px;height:32px;border-radius:999px;background:var(--green);color:white;display:grid;place-items:center;font-size:.75rem;font-weight:850}
+    .step b{display:block}.step small{color:var(--muted)}
+    .stageCard{background:var(--deep);color:white;border-radius:24px;padding:30px}
+    .stageCard .big{font-size:4rem;letter-spacing:-.07em;line-height:1;font-weight:850}
+    .stageCard p{color:#c3d4cf}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .chip{padding:7px 10px;border:1px solid rgba(255,255,255,.16);border-radius:999px;font-size:.76rem;color:#d7e6e2}
+    .evidenceGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+    .evidenceCard{background:white;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+    .evidenceCard img{width:100%;display:block;aspect-ratio:16/10;object-fit:contain;background:#fff}
+    .evidenceBody{padding:18px 20px}.evidenceBody b{display:block}.evidenceBody span{color:var(--muted);font-size:.87rem}
+    .recognition{background:var(--deep);color:white}
+    .recognition .kicker{color:#79d6bc}.recognition .sectionLead{color:#bdd2cc}
+    .recognitionGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+    .recognitionCard{border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:28px;background:rgba(255,255,255,.055)}
+    .recognitionCard .year{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#83d8c1;font-weight:850}
+    .recognitionCard h3{font-size:1.55rem;margin:8px 0 5px}.recognitionCard p{color:#c6d8d2;margin:0 0 16px}
+    .recognitionCard a{color:white;font-weight:800;text-underline-offset:3px}
+    .ecosystemGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
+    .ecoCard{display:block;text-decoration:none;border:1px solid var(--line);background:white;border-radius:20px;padding:24px;transition:.2s}
+    .ecoCard:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .ecoCard .ecoLabel{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:850;color:var(--green)}
+    .ecoCard h3{margin:7px 0 8px;font-size:1.3rem}.ecoCard p{margin:0;color:var(--muted);font-size:.9rem}
+    .disclaimer{margin-top:18px;padding:14px 16px;border-left:3px solid var(--gold);background:#fffaf0;color:#6b604a;border-radius:8px;font-size:.84rem}
+    .teamGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+    .person{border:1px solid var(--line);background:white;border-radius:20px;padding:24px}
+    .avatar{width:48px;height:48px;border-radius:14px;background:var(--mint);display:grid;place-items:center;color:var(--green);font-weight:900;margin-bottom:18px}
+    .person h3{margin:0 0 2px}.role{color:var(--green);font-size:.82rem;font-weight:850}.person p{color:var(--muted);font-size:.9rem;margin-bottom:0}
+    .cta{padding:40px 0 96px}
+    .ctaBox{background:linear-gradient(135deg,#0d3a32,#0f6b59);color:white;border-radius:30px;padding:50px}
+    .ctaBox h2{font-size:clamp(2rem,4vw,3.45rem);line-height:1;letter-spacing:-.05em;margin:0 0 12px}
+    .ctaBox>p{color:#d0e4de;margin:0;max-width:760px}
+    .ctaChoices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+    .ctaChoice{display:block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px;text-decoration:none}
+    .ctaChoice b{display:block;margin-bottom:5px}.ctaChoice span{color:#d2e5df;font-size:.84rem}
+    .contactRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+    .contactRow .btn{background:white;color:var(--green);border-color:white}
+    footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted);font-size:.82rem}
+    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.legal{max-width:780px}
+    @media(max-width:900px){
+      .navlinks a:not(.btn){display:none}
+      .heroGrid,.problemGrid,.solutionGrid,.traceGrid,.statusGrid{grid-template-columns:1fr}
+      .hero{padding-top:54px}.float{left:10px}
+      .metricGrid{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .productGrid,.teamGrid,.ecosystemGrid,.recognitionGrid,.ctaChoices,.flow,.evidenceGrid{grid-template-columns:1fr 1fr}
+      .cards{grid-template-columns:1fr}.ctaBox{padding:34px}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(100% - 26px,1160px)}h1{font-size:3.1rem}
+      .metricGrid,.productGrid,.teamGrid,.ecosystemGrid,.recognitionGrid,.ctaChoices,.flow,.evidenceGrid{grid-template-columns:1fr}
+      .metric{border-right:0;border-bottom:1px solid var(--line)!important}.metric:last-child{border-bottom:0!important}
+      .actions .btn,.contactRow .btn{width:100%}.heroCard{padding:10px;border-radius:20px}.float{position:static;margin-top:10px}.statusBadge{top:20px;right:20px}
+      .ctaBox{border-radius:22px}
+    }
   </style>
 </head>
 <body>
-  <nav class="nav"><div class="wrap navin"><a class="brand" href="#inicio"><span class="mark">LV</span>LifeVault</a><div class="navlinks"><a href="#solucion">Solución</a><a href="#desarrollo">Desarrollo</a><a href="#vinculacion">Vinculación</a><a href="#equipo">Equipo</a><a class="btn primary" href="#contacto">Colaborar</a></div></div></nav>
+  <nav class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#inicio"><span class="mark">LV</span>LifeVault</a>
+      <div class="navlinks">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#producto">Producto</a>
+        <a href="#desarrollo">Desarrollo</a>
+        <a href="#equipo">Equipo</a>
+        <a class="btn primary" href="#contacto">Colaborar</a>
+      </div>
+    </div>
+  </nav>
 
   <main>
-    <header class="hero" id="inicio"><div class="wrap heroGrid">
-      <div><span class="eyebrow"><span class="dot"></span> Startup MedTech en desarrollo</span><h1>Preservar cada órgano. Proteger cada oportunidad.</h1><p class="lead">LifeVault desarrolla una plataforma portátil de conservación activa, monitoreo y trazabilidad para el transporte de órganos destinados a trasplante, diseñada desde México para contextos hospitalarios donde costo, control térmico y logística importan por igual.</p><div class="actions"><a class="btn primary" href="#solucion">Conocer LifeVault</a><a class="btn ghost" href="#contacto">Explorar colaboración</a></div><p class="micro">Actualmente en etapa de prototipo y validación. No es un dispositivo clínicamente validado ni comercializado.</p></div>
-      <div class="heroCard"><img src="assets/lifevault-cad.png" alt="Diseño CAD del prototipo LifeVault"><div class="float"><b>LifeVault K1</b><span>Primera variante · preservación de riñón</span></div></div>
-    </div></header>
+    <header class="hero" id="inicio">
+      <div class="wrap heroGrid">
+        <div>
+          <span class="eyebrow"><span class="dot"></span> Startup MedTech en desarrollo · TRL 2–3</span>
+          <h1>Preservar cada órgano. Proteger cada oportunidad.</h1>
+          <p class="lead">LifeVault desarrolla una plataforma portátil de conservación activa, monitoreo y trazabilidad para el transporte de órganos destinados a trasplante, diseñada desde México para contextos hospitalarios donde costo, control térmico y logística importan por igual.</p>
+          <div class="actions">
+            <a class="btn primary" href="#como-funciona">Conocer LifeVault</a>
+            <a class="btn ghost" href="#contacto">Explorar colaboración</a>
+          </div>
+          <p class="micro">Prototipo exploratorio de ingeniería en desarrollo. Los subsistemas críticos aún requieren validación experimental reproducible. LifeVault no es un dispositivo clínicamente validado ni está disponible para uso comercial.</p>
+        </div>
+        <div class="heroCard">
+          <img src="assets/lifevault-cad.png" alt="Diseño CAD del prototipo LifeVault">
+          <span class="statusBadge">PROTOTIPO EN DESARROLLO</span>
+          <div class="float"><b>LifeVault K1</b><span>Primera variante · riñón</span></div>
+        </div>
+      </div>
+    </header>
 
-    <div class="metrics"><div class="wrap metricGrid"><div class="metric"><strong>0–4 °C</strong><span>Rango objetivo de diseño para almacenamiento estático en frío</span></div><div class="metric"><strong>TRL 2–3</strong><span>Desarrollo tecnológico temprano con prototipo y validación pendiente</span></div><div class="metric"><strong>18,992</strong><span>Personas en espera de trasplante en México, Q1 2025*</span></div><div class="metric"><strong>K1</strong><span>Riñón como primera indicación para acotar validación y requisitos</span></div></div></div>
+    <div class="metrics">
+      <div class="wrap metricGrid">
+        <div class="metric"><strong>0–4 °C</strong><span>Rango objetivo de diseño para almacenamiento estático en frío</span></div>
+        <div class="metric"><strong>TRL 2–3</strong><span>Concepto tecnológico y prototipo exploratorio; validación experimental pendiente</span></div>
+        <div class="metric"><strong>18,992</strong><span>Personas en espera de trasplante en México, Q1 2025. <a href="https://www.gob.mx/cenatra" target="_blank" rel="noopener">CENATRA ↗</a></span></div>
+        <div class="metric"><strong>K1</strong><span>Riñón como primera indicación para acotar requisitos y validación</span></div>
+      </div>
+    </div>
 
-    <section class="problem"><div class="wrap problemGrid"><div><span class="kicker">El problema</span><h2 class="sectionTitle">El transporte sigue siendo un punto vulnerable de la cadena de trasplante.</h2><p class="sectionLead">Entre una hielera pasiva y una plataforma avanzada de perfusión existe una brecha de control, trazabilidad, costo y complejidad. LifeVault se diseña para ocupar ese espacio intermedio sin sustituir a los sistemas de perfusión cuando éstos están indicados.</p></div><div class="cards"><div class="darkCard"><b>Variación térmica</b><p>Una excursión de temperatura durante el traslado puede comprometer la conservación del tejido.</p></div><div class="darkCard"><b>Trazabilidad limitada</b><p>Sin registro continuo, reconstruir las condiciones reales del traslado puede ser difícil.</p></div><div class="darkCard"><b>Restricciones de costo</b><p>Las soluciones especializadas pueden resultar difíciles de escalar en instituciones con presupuestos limitados.</p></div><div class="darkCard"><b>Logística crítica</b><p>Tiempo, energía, identificación, limpieza y movilidad deben funcionar como un solo sistema.</p></div></div></div></section>
+    <section class="problem">
+      <div class="wrap problemGrid">
+        <div>
+          <span class="kicker">El problema</span>
+          <h2 class="sectionTitle">El transporte sigue siendo un punto vulnerable de la cadena de trasplante.</h2>
+          <p class="sectionLead">Entre una hielera pasiva y una plataforma avanzada de perfusión existe una brecha de control, trazabilidad, costo y complejidad. LifeVault se diseña para ocupar ese espacio intermedio sin sustituir a los sistemas de perfusión cuando éstos están indicados.</p>
+        </div>
+        <div class="cards">
+          <div class="darkCard"><b>Variación térmica</b><p>Una excursión de temperatura durante el traslado puede comprometer la conservación del tejido.</p></div>
+          <div class="darkCard"><b>Trazabilidad limitada</b><p>Sin registro continuo, reconstruir las condiciones reales del traslado puede ser difícil.</p></div>
+          <div class="darkCard"><b>Restricciones de costo</b><p>Las soluciones especializadas pueden ser difíciles de escalar en instituciones con presupuestos limitados.</p></div>
+          <div class="darkCard"><b>Logística crítica</b><p>Tiempo, energía, identificación, limpieza y movilidad deben funcionar como un solo sistema.</p></div>
+        </div>
+      </div>
+    </section>
 
-    <section id="solucion"><div class="wrap solutionGrid"><div class="diagram"><img src="assets/lifevault-exploded.png" alt="Despiece funcional del concepto LifeVault"></div><div><span class="kicker">La solución</span><h2 class="sectionTitle">Una cadena de frío que puede medir, responder y dejar evidencia.</h2><p class="sectionLead">La arquitectura de LifeVault integra control térmico activo con una ruta progresiva hacia trazabilidad digital. La función crítica permanece local para que el enfriamiento no dependa de conectividad a Internet.</p><div class="features"><div class="feature"><div class="ico">01</div><div><b>Refrigeración termoeléctrica activa</b><span>Módulos Peltier con accionamiento PWM y disipación por ventilación forzada.</span></div></div><div class="feature"><div class="ico">02</div><div><b>Sensado y control local</b><span>Arquitectura basada en ESP32 y sensores digitales de temperatura para lectura y respuesta continua.</span></div></div><div class="feature"><div class="ico">03</div><div><b>Diseño reutilizable</b><span>Contenedor interno metálico y envolvente concebida para iteración, limpieza y uso institucional.</span></div></div><div class="feature"><div class="ico">04</div><div><b>LifeVault Trace</b><span>Evolución prevista hacia registros de temperatura, ubicación, batería, eventos y alertas para auditoría del traslado.</span></div></div></div></div></div></section>
+    <section class="how" id="como-funciona">
+      <div class="wrap">
+        <span class="kicker">Cómo funciona</span>
+        <h2 class="sectionTitle">De un traslado pasivo a un proceso medible y controlado.</h2>
+        <p class="sectionLead">La visión de LifeVault es integrar la conservación térmica y la evidencia del traslado en una misma plataforma, sin depender de conectividad para la función crítica de enfriamiento.</p>
+        <div class="flow">
+          <div class="flowCard"><div class="flowNum">01</div><h3>Preparar</h3><p>El órgano permanece dentro del sistema de empaque clínico definido por el protocolo correspondiente.</p></div>
+          <div class="flowCard"><div class="flowNum">02</div><h3>Conservar</h3><p>El sistema termoeléctrico busca regular activamente la temperatura del compartimiento durante el traslado.</p></div>
+          <div class="flowCard"><div class="flowNum">03</div><h3>Monitorizar</h3><p>El sensado local registra temperatura y estado del sistema para detectar desviaciones y eventos relevantes.</p></div>
+          <div class="flowCard"><div class="flowNum">04</div><h3>Trazar</h3><p>La hoja de ruta contempla registro digital, batería, ubicación y alertas para documentar el trayecto.</p></div>
+        </div>
+      </div>
+    </section>
 
-    <section class="platform"><div class="wrap"><span class="kicker">Plataforma</span><h2 class="sectionTitle">Empezar con una indicación. Escalar con evidencia.</h2><p class="sectionLead">La estrategia de producto prioriza LifeVault K1 para riñón. Las futuras variantes deberán demostrar de forma independiente sus requisitos de desempeño, seguridad y evidencia.</p><div class="productGrid"><article class="product active"><span class="tag">PRIORIDAD</span><div class="status">En desarrollo</div><h3>K1 — Kidney</h3><p>Primera variante recomendada para fijar masa, volumen, autonomía, rango térmico y criterios de verificación.</p></article><article class="product"><div class="status">Futuro</div><h3>H1 — Heart</h3><p>Extensión potencial de la plataforma, sujeta a requisitos y validación específicos para corazón.</p></article><article class="product"><div class="status">Futuro</div><h3>L1 — Liver</h3><p>Extensión potencial de la plataforma, con evidencia propia antes de cualquier uso previsto.</p></article></div></div></section>
+    <section id="solucion">
+      <div class="wrap solutionGrid">
+        <div class="diagram"><img src="assets/lifevault-exploded.png" alt="Despiece funcional del concepto LifeVault"></div>
+        <div>
+          <span class="kicker">La solución</span>
+          <h2 class="sectionTitle">Una arquitectura de conservación activa, portátil y progresivamente trazable.</h2>
+          <p class="sectionLead">LifeVault integra control térmico activo con una ruta de desarrollo hacia trazabilidad digital. La función térmica crítica permanece local: la conectividad es auxiliar, no un requisito para enfriar.</p>
+          <div class="features">
+            <div class="feature"><div class="ico">01</div><div><b>Refrigeración termoeléctrica</b><span>Módulos Peltier con accionamiento PWM y disipación por ventilación forzada.</span></div></div>
+            <div class="feature"><div class="ico">02</div><div><b>Sensado y control local</b><span>Arquitectura basada en ESP32 y sensado digital durante la fase de prototipo.</span></div></div>
+            <div class="feature"><div class="ico">03</div><div><b>Diseño reutilizable</b><span>Arquitectura externa reutilizable y compartimiento interno orientado a limpieza y reesterilización.</span></div></div>
+            <div class="feature"><div class="ico">04</div><div><b>Diseño para instituciones</b><span>Enfoque en control, mantenibilidad y costo contenido para facilitar una futura adopción institucional.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="desarrollo"><div class="wrap statusGrid"><div><span class="kicker">Estado de desarrollo</span><h2 class="sectionTitle">Construir primero. Validar de forma escalonada.</h2><p class="sectionLead">LifeVault ya cuenta con prototipo físico, electrónica PWM funcional y diseño CAD 3D. El siguiente objetivo es convertir construcción y funcionalidad de subsistemas en evidencia reproducible de desempeño.</p><div class="roadmap"><div class="step"><div class="stepNum">1</div><div><b>Phantom térmico</b><small>Caracterización con carga representativa sin material biológico.</small></div></div><div class="step"><div class="stepNum">2</div><div><b>Tejido ex vivo</b><small>Transferencia térmica bajo protocolos institucionales aplicables.</small></div></div><div class="step"><div class="stepNum">3</div><div><b>Validación logística controlada</b><small>Simulación del flujo real origen–destino y evaluación de autonomía, alarmas y trazabilidad.</small></div></div><div class="step"><div class="stepNum">4</div><div><b>Ruta regulatoria</b><small>Generación progresiva de expediente, gestión de riesgos y evidencia requerida por las autoridades.</small></div></div></div></div><aside class="stageCard"><span class="kicker" style="color:#8ad9c2">Startup en desarrollo</span><div class="big">TRL<br>2–3</div><p>El proyecto se comunica como desarrollo tecnológico temprano con prototipo funcional de subsistemas y validación experimental pendiente. No se afirma validación térmica formal, preclínica o clínica completada.</p><div class="chips"><span class="chip">Prototipo físico</span><span class="chip">CAD 3D</span><span class="chip">PWM funcional</span><span class="chip">CENATRA: referencia y vinculación</span><span class="chip">CETRAJAL: referencia y vinculación</span><span class="chip">COFEPRIS: ruta en planeación</span></div></aside></div></section>
+    <section class="trace" id="trace">
+      <div class="wrap traceGrid">
+        <div>
+          <span class="kicker">LifeVault Trace · roadmap digital</span>
+          <h2 class="sectionTitle">La temperatura importa. También importa poder demostrar qué ocurrió durante el traslado.</h2>
+          <p class="sectionLead">LifeVault Trace es la capa digital prevista para futuras iteraciones: registro de temperatura, batería, eventos, ubicación y alertas. Su desarrollo y validación aún forman parte del roadmap del proyecto.</p>
+          <div class="actions"><a class="btn soft" href="#desarrollo">Ver ruta de desarrollo</a></div>
+        </div>
+        <div class="traceMock" aria-label="Mockup conceptual de LifeVault Trace">
+          <div class="traceTop"><strong>LifeVault Trace</strong><span class="roadtag">CONCEPTO · ROADMAP</span></div>
+          <div class="traceScreen">
+            <div class="tempLine"><div><span style="font-size:.75rem;color:#73827e">Temperatura interna</span><div class="temp">2.8 °C</div></div><span class="good">Dentro de rango</span></div>
+            <div class="traceRows">
+              <div class="traceMini"><b>Batería</b><span>Estado y autonomía</span></div>
+              <div class="traceMini"><b>Ubicación</b><span>GPS / ruta</span></div>
+              <div class="traceMini"><b>Eventos</b><span>Registro temporal</span></div>
+              <div class="traceMini"><b>Alertas</b><span>Desviaciones críticas</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="vinculacion" class="platform"><div class="wrap"><span class="kicker">Vinculación y ecosistema</span><h2 class="sectionTitle">Desarrollo conectado con el ecosistema de trasplantes e innovación.</h2><p class="sectionLead">LifeVault mantiene como referencia a las instituciones responsables de coordinar y fortalecer la actividad de donación y trasplantes en México y Jalisco. Los siguientes enlaces son institucionales y no implican aval, autorización ni certificación del proyecto.</p><div class="ecosystemGrid"><a class="ecoCard" href="https://www.gob.mx/cenatra" target="_blank" rel="noopener"><div class="ecoLabel">Referencia nacional</div><h3>CENATRA</h3><p>Centro Nacional de Trasplantes · Secretaría de Salud. Información oficial sobre donación, trasplantes, regulación y coordinación nacional.</p></a><a class="ecoCard" href="https://cetrajal.jalisco.gob.mx/" target="_blank" rel="noopener"><div class="ecoLabel">Referencia estatal</div><h3>CETRAJAL</h3><p>Centro de Trasplantes de Órganos y Tejidos del Estado de Jalisco. Referente estatal para la actividad de donación y trasplantes.</p></a></div><div class="participation"><a href="https://www.retozapopan.com.mx/" target="_blank" rel="noopener">Semifinalista · Reto Zapopan 2026</a><a href="https://jaliscomedtech.com/" target="_blank" rel="noopener">Participación activa · Jalisco MedTech 2026</a></div></div></section>
+    <section class="platform" id="producto">
+      <div class="wrap">
+        <span class="kicker">Estrategia de producto</span>
+        <h2 class="sectionTitle">Una plataforma, una primera indicación claramente acotada.</h2>
+        <p class="sectionLead">LifeVault K1 concentra el desarrollo inicial en riñón para fijar carga térmica, volumen, autonomía, condiciones de transporte y criterios de verificación. Las variantes para otros órganos son extensiones futuras sujetas a requisitos y evidencia específicos.</p>
+        <div class="productGrid">
+          <article class="product active"><span class="tag">PRIORIDAD</span><div class="status">Primera variante</div><h3>K1 · Kidney</h3><p>Producto inicial propuesto para estructurar el programa de validación y la estrategia de diseño.</p></article>
+          <article class="product"><div class="status">Extensión futura</div><h3>H1 · Heart</h3><p>Posible variante específica para corazón. Requerirá requisitos térmicos, logísticos y regulatorios propios.</p></article>
+          <article class="product"><div class="status">Extensión futura</div><h3>L1 · Liver</h3><p>Posible variante específica para hígado, independiente de la evidencia que eventualmente se genere para K1.</p></article>
+        </div>
+      </div>
+    </section>
 
-    <section id="equipo"><div class="wrap"><span class="kicker">Equipo</span><h2 class="sectionTitle">Ingeniería, desarrollo institucional y criterio clínico.</h2><p class="sectionLead">LifeVault surge en Guadalajara, Jalisco, con trabajo articulado desde la Universidad de Guadalajara, CUCEI y CyberTIM Lab.</p><div class="teamGrid"><article class="person"><div class="avatar">AT</div><h3>Ing. Alejandra Trelles</h3><div class="role">Desarrollo principal · origen de la idea</div><p>Desarrollo técnico del sistema y evolución del prototipo.</p></article><article class="person"><div class="avatar">HG</div><h3>Mtro. Hugo G. Venegas</h3><div class="role">Desarrollo · relaciones institucionales · procuración de fondos</div><p>Articulación del proyecto, desarrollo, alianzas y estrategia de crecimiento.</p></article><article class="person"><div class="avatar">HB</div><h3>Dr. Hélix Barajas</h3><div class="role">Especialista médico</div><p>Criterio clínico, vinculación hospitalaria y acompañamiento para la validación del concepto.</p></article></div></div></section>
+    <section id="desarrollo">
+      <div class="wrap statusGrid">
+        <div>
+          <span class="kicker">Estado de desarrollo</span>
+          <h2 class="sectionTitle">Construir hardware es el inicio; demostrar desempeño es el siguiente hito.</h2>
+          <p class="sectionLead">LifeVault ya cuenta con un prototipo exploratorio de ingeniería, electrónica PWM funcional reportada y diseño CAD 3D. La prioridad ahora es convertir ese avance en evidencia experimental reproducible.</p>
+          <div class="roadmap">
+            <div class="step"><div class="stepNum">1</div><div><b>Caracterización con phantom térmico</b><small>Estabilidad, uniformidad espacial, tiempo dentro de rango, recuperación y consumo energético.</small></div></div>
+            <div class="step"><div class="stepNum">2</div><div><b>Robustez y autonomía</b><small>Perturbaciones ambientales, batería, redundancia de sensado y modos de falla relevantes.</small></div></div>
+            <div class="step"><div class="stepNum">3</div><div><b>Validación ex vivo bajo protocolo</b><small>Únicamente con autorizaciones institucionales y éticas aplicables.</small></div></div>
+            <div class="step"><div class="stepNum">4</div><div><b>Validación logística controlada</b><small>Simulación del flujo real origen–destino y verificación de trazabilidad.</small></div></div>
+            <div class="step"><div class="stepNum">5</div><div><b>Ruta regulatoria y escalamiento</b><small>Expediente técnico, diseño para manufactura y estrategia de acceso institucional.</small></div></div>
+          </div>
+        </div>
+        <aside class="stageCard">
+          <div class="big">TRL<br>2–3</div>
+          <p>Concepto tecnológico y prototipo exploratorio en desarrollo. Aún no se afirma validación térmica formal, preclínica ni clínica.</p>
+          <div class="chips"><span class="chip">CAD 3D</span><span class="chip">PWM</span><span class="chip">ESP32</span><span class="chip">Peltier</span><span class="chip">Sensado</span><span class="chip">Validación pendiente</span></div>
+        </aside>
+      </div>
+    </section>
 
-    <section class="cta" id="contacto"><div class="wrap"><div class="ctaBox"><div><h2>Buscamos validar, colaborar y construir la siguiente iteración.</h2><p>LifeVault está abierto a conversación con hospitales, coordinaciones de trasplante, investigadores, especialistas en cadena de frío, manufactura, regulación, inversión temprana y programas de innovación.</p><p style="margin-top:14px"><strong>Contacto:</strong> <a href="tel:+523322447765" style="color:white">+52 33 2244 7765</a></p></div><a class="btn" href="tel:+523322447765">Contactar</a></div></div></section>
+    <section style="padding-top:20px">
+      <div class="wrap">
+        <span class="kicker">Evidencia de ingeniería</span>
+        <h2 class="sectionTitle">Del concepto a una arquitectura física susceptible de iteración.</h2>
+        <div class="evidenceGrid">
+          <div class="evidenceCard"><img src="assets/lifevault-cad.png" alt="Vistas CAD de LifeVault"><div class="evidenceBody"><b>Definición mecánica</b><span>Vistas exteriores, geometría, interfaz y organización interna del concepto.</span></div></div>
+          <div class="evidenceCard"><img src="assets/lifevault-exploded.png" alt="Despiece del sistema LifeVault"><div class="evidenceBody"><b>Despiece funcional</b><span>Tapa, pantalla, contenedor interno, estructura y zona de enfriamiento.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recognition" id="reconocimientos">
+      <div class="wrap">
+        <span class="kicker">Reconocimientos y programas</span>
+        <h2 class="sectionTitle">LifeVault avanza dentro del ecosistema de innovación de Jalisco.</h2>
+        <p class="sectionLead">La participación en programas de emprendimiento y MedTech permite contrastar la propuesta con mentores, instituciones y actores del ecosistema mientras continúa el desarrollo técnico.</p>
+        <div class="recognitionGrid">
+          <article class="recognitionCard"><div class="year">2026 · Emprendimiento</div><h3>Reto Zapopan</h3><p>Semifinalista en el programa de aceleración y emprendimiento.</p><a href="https://www.retozapopan.com.mx/" target="_blank" rel="noopener">Sitio oficial ↗</a></article>
+          <article class="recognitionCard"><div class="year">2026 · MedTech</div><h3>Jalisco MedTech</h3><p>Participación activa dentro del ecosistema estatal de innovación en dispositivos médicos.</p><a href="https://jaliscomedtech.com/" target="_blank" rel="noopener">Sitio oficial ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="vinculacion">
+      <div class="wrap">
+        <span class="kicker">Referencias institucionales y vinculación</span>
+        <h2 class="sectionTitle">Desarrollo alineado con el ecosistema de donación y trasplantes.</h2>
+        <p class="sectionLead">LifeVault busca dialogar con actores clínicos, técnicos, regulatorios y de coordinación de trasplantes para que las futuras pruebas respondan a necesidades reales del sistema.</p>
+        <div class="ecosystemGrid">
+          <a class="ecoCard" href="https://www.gob.mx/cenatra" target="_blank" rel="noopener"><div class="ecoLabel">Ámbito nacional</div><h3>CENATRA</h3><p>Centro Nacional de Trasplantes, órgano responsable de impulsar y coordinar los procesos de donación y trasplante en México.</p></a>
+          <a class="ecoCard" href="https://cetrajal.jalisco.gob.mx/" target="_blank" rel="noopener"><div class="ecoLabel">Ámbito estatal · Jalisco</div><h3>CETRAJAL</h3><p>Centro de Trasplantes de Órganos y Tejidos del Estado de Jalisco.</p></a>
+        </div>
+        <div class="disclaimer">Los enlaces institucionales se incluyen como referencias del ecosistema de trasplantes y de la ruta de vinculación. No implican aval, autorización, certificación ni aprobación de LifeVault por parte de CENATRA, CETRAJAL u otra autoridad.</div>
+      </div>
+    </section>
+
+    <section id="equipo">
+      <div class="wrap">
+        <span class="kicker">Equipo</span>
+        <h2 class="sectionTitle">Ingeniería, estrategia y criterio clínico desde el inicio.</h2>
+        <p class="sectionLead">El equipo combina desarrollo tecnológico, construcción de alianzas y experiencia médica para convertir una necesidad observada en un programa de desarrollo verificable.</p>
+        <div class="teamGrid">
+          <article class="person"><div class="avatar">AT</div><h3>Ing. Alejandra Trelles</h3><div class="role">Co-Founder · Product & Engineering</div><p>Desarrollo principal del producto, integración técnica y origen de la idea.</p></article>
+          <article class="person"><div class="avatar">HV</div><h3>Mtro. Hugo G. Venegas</h3><div class="role">Co-Founder · Strategy & Partnerships</div><p>Desarrollo, estrategia, relaciones institucionales y procuración de fondos.</p></article>
+          <article class="person"><div class="avatar">HB</div><h3>Dr. Hélix Barajas</h3><div class="role">Clinical Advisor</div><p>Perspectiva médica especializada, acceso al entorno clínico y orientación para validación.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <div class="wrap">
+        <div class="ctaBox">
+          <h2>Buscamos validar, colaborar y construir la siguiente iteración.</h2>
+          <p>LifeVault está abierto a colaboración con hospitales, especialistas, investigadores, programas de innovación, aliados tecnológicos e inversionistas de etapa temprana que comprendan el horizonte de desarrollo de un dispositivo médico.</p>
+          <div class="ctaChoices">
+            <a class="ctaChoice" href="tel:+523322447765"><b>Soy hospital o especialista</b><span>Explorar colaboración clínica y necesidades de transporte.</span></a>
+            <a class="ctaChoice" href="tel:+523322447765"><b>Soy institución o programa</b><span>Vinculación, validación, mentoría y acceso a capacidades.</span></a>
+            <a class="ctaChoice" href="tel:+523322447765"><b>Soy aliado o inversionista</b><span>Conocer roadmap, estrategia y siguientes hitos.</span></a>
+          </div>
+          <div class="contactRow">
+            <a class="btn" href="tel:+523322447765">Llamar · +52 33 2244 7765</a>
+            <a class="btn" href="https://wa.me/523322447765" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer><div class="wrap foot"><div class="brand"><span class="mark">LV</span>LifeVault</div><div class="legal">LifeVault es un proyecto/startup MedTech en desarrollo. La información presentada describe objetivos de diseño y estado de prototipo; no constituye una afirmación de autorización sanitaria, validación clínica, desempeño clínico ni disponibilidad comercial. *Cifra de lista de espera utilizada por el proyecto para Q1 2025.</div><div>Universidad de Guadalajara · CUCEI · CyberTIM Lab<br>Guadalajara, Jalisco, México<br><a href="tel:+523322447765">+52 33 2244 7765</a></div></div></footer>
+  <footer>
+    <div class="wrap foot">
+      <div><b>LifeVault</b><br>Startup MedTech en desarrollo · Guadalajara, Jalisco, México</div>
+      <div class="legal">LifeVault es un proyecto tecnológico en desarrollo. La información de esta página describe objetivos, prototipos, arquitectura y hoja de ruta; no constituye una afirmación de desempeño clínico, autorización sanitaria ni disponibilidad comercial. © 2026 LifeVault.</div>
+    </div>
+  </footer>
 </body>
 </html>
