@@ -167,6 +167,30 @@
     .processStep span{color:var(--muted);font-size:.88rem}
     .processNote{margin-top:14px;color:#71807c;font-size:.78rem}
 
+  
+    .processVisual{position:relative;min-height:320px}
+    .processPlaceholder{
+      position:absolute;inset:12px;
+      border:2px dashed #9dcbbb;
+      border-radius:16px;
+      background:linear-gradient(135deg,#f8fcfa,#edf7f3);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:28px;
+      color:var(--green);
+      z-index:1;
+    }
+    .processPlaceholder strong{display:block;font-size:1.05rem;margin-bottom:7px}
+    .processPlaceholder span{display:block;color:var(--muted);font-size:.88rem}
+    .processVisual img{
+      position:relative;
+      z-index:2;
+      background:white;
+    }
+    .processVisual img[src=""], .processVisual img:not([src]){display:none}
+
   </style>
 </head>
 <body>
@@ -266,8 +290,16 @@
             </p>
           </div>
           <div class="processVisual">
+            <div class="processPlaceholder" aria-hidden="true">
+              <div>
+                <strong>COLLAGE DEL PROCESO CLÍNICO Y LOGÍSTICO</strong>
+                <span>Coloca aquí la imagen <b>assets/lifevault-proceso-clinico.jpg</b><br>
+                Procuración · acondicionamiento · conservación · transporte</span>
+              </div>
+            </div>
             <img src="assets/lifevault-proceso-clinico.jpg"
-                 alt="Secuencia de procuración, acondicionamiento y traslado de órganos en entorno hospitalario">
+                 alt="Secuencia de procuración, acondicionamiento y traslado de órganos en entorno hospitalario"
+                 onerror="this.style.display='none'">
           </div>
         </div>
       </div>
